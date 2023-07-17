@@ -8,6 +8,7 @@
             $location.path('/post/' + userid)
         };
 
+
         $scope.userid = '1';
     };
 
