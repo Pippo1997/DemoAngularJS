@@ -2,13 +2,21 @@
 
     let app = angular.module('MyApp');
 
-    let myController = function ($scope, $location) {
+    let myController = function ($scope, $location, apiJson) {
 
         $scope.search = function (userid) {
             $location.path('/post/' + userid)
         };
 
-        $scope.userid = '1';
+        let onPhoto = function(data){
+            $scope.photos = data;
+        };
+
+        let onError = function (reason) {
+            $scope.error = 'not found data';
+        };
+
+        apiJson.getPhoto($scope.photos).then(onPhoto, onError);
     };
 
     app.controller('myController', myController);
