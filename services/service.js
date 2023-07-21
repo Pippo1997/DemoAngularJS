@@ -1,7 +1,7 @@
 (function (){
 
     let UrlId = 'https://jsonplaceholder.typicode.com/posts/';
-    let UrlPhoto = 'https://jsonplaceholder.typicode.com/albums/1/photos';
+    let UrlPhoto = 'https://jsonplaceholder.typicode.com/albums/1/photos/';
 
     let apiJson = function($http) {
         let getUserId = function (userid) {

@@ -4,6 +4,139 @@
     box-sizing: border-box;
 }
 
-input{
-    width: 250px;
+/*header*/
+
+.btn-group{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/*offcanvas*/
+
+.input-canvas {
+    max-width: 190px;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 2px 2px 7px 0 rgb(0, 0, 0, 0.2);
+    outline: none;
+    color: dimgray;
+}
+
+.input-canvas:invalid {
+    animation: justshake 0.3s forwards;
+    color: red;
+}
+
+@keyframes justshake {
+    25% {
+        transform: translateX(5px);
+    }
+
+    50% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX-(5px);
+    }
+}
+
+.offcanvas-body{
+    height: 100%;
+}
+
+.cta {
+    border: none;
+    background: none;
+    position: absolute;
+    top: 30px;
+    z-index: 3;
+}
+
+.cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+}
+
+.cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active svg {
+    transform: scale(0.9);
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.href{
+    color: black;
+}
+
+.fake-href{
+    cursor: pointer;
+    color: black;
+}
+
+/*photo*/
+
+.Card_effect{
+    transition: all .3s ease-out;
+}
+
+.Card_effect:hover{
+    transform: translate(0, -10px);
+}
+
+/*footer*/
+
+.img-overIT{
+    width: 170px;
+}
+
+footer li i{
+    font-size:30px;
+}
+
+footer li i{
+    color: white;
+    transition: all .3s ease-out;
+}
+
+footer li i:hover{
+    color: blue;
 }
