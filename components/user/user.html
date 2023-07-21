@@ -1,12 +1,13 @@
 <div class="container" style="height: 65rem">
     <div class="row d-flex justify-content-center m-5">
-        <div class="card" style="width: 70rem";>
+        <div class="card" style="width: 70rem">
             <div class="card-body">
-                <h5 class="card-title">{{user.id}}</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">{{user.title}}</h6>
-                <p class="card-text m-t2">{{user.body}}</p>
+                <h2 class="card-title d-flex justify-content-center">{{user.id}}</h2>
+                Name: <p class="card-subtitle mb-2">{{user.name}}</p>
+                Username: <p class="card-text m-t2">{{user.username}}</p>
+                Email: <p class="card-text m-t2">{{user.email}}</p>
                 <div uib-alert ng-repeat="alert in alerts" ng-class="'alert-' + (alert.type || 'warning')" close="closeAlert($index)">{{alert.msg}}</div>
-                <div class="d-flex justify-content-between mt-3">
+                <div class="d-flex justify-content-between mt-5">
                     <a class="fake-href" ng-click="addAlert()">Back to Search</a>
                     <a href="#/main" class="href">Back to Search</a>
                 </div>

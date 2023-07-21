@@ -5,7 +5,7 @@
     let myController = function ($scope, $location, apiJson) {
 
         $scope.search = function (userid) {
-            $location.path('/post/' + userid)
+            $location.path('/user/' + userid)
         };
 
         let onPhoto = function(data){

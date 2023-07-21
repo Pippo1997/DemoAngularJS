@@ -8,7 +8,7 @@
             templateUrl: 'components/main/main.html',
             controller: 'myController'
         })
-            .when('/post/:userid', {
+            .when('/user/:userid', {
                 templateUrl: 'components/user/user.html',
                 controller: 'UserController'
             })

@@ -23,9 +23,15 @@
     color: dimgray;
 }
 
-.input-canvas:invalid {
+/*validazione form*/
+
+.input-canvas.ng-invalid {
     animation: justshake 0.3s forwards;
     color: red;
+}
+
+.input-canvas.ng-valid {
+    color: green;
 }
 
 @keyframes justshake {
