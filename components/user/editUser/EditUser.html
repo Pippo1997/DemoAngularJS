@@ -1,0 +1,25 @@
+<div class="container" style="height: 68rem">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Edit Book</h2>
+                <div><a class="href" href="#!/AllUsers">Back to all user</a></div>
+            </div>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">User name</label>
+                    <input ng-model="Edit.currentUser.name" type="text" class="form-control" id="name">
+                </div>
+                <div class="mb-3">
+                    <label for="username" class="form-label">User username</label>
+                    <input ng-model="Edit.currentUser.username" type="text" class="form-control" id="username">
+                </div>
+                <div class="mb-3">
+                    <label for="Email" class="form-label">User Email</label>
+                    <input ng-model="Edit.currentUser.email" type="email" class="form-control" id="Email">
+                </div>
+                <button class="btn btn-primary" ng-click="Edit.saveUser()">Save</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="d-flex justify-content-center m-4">
+  <button class="cta d-none d-lg-block mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+    <span class="hover-underline-animation"> Click me to search the user </span>
+    <svg viewBox="0 0 46 16" height="15" width="40" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+      <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+    </svg>
+  </button>
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h4 class="offcanvas-title" id="offcanvasExampleLabel">Angualr.Js Demo</h4>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        If you want to search a single user, digit in the input a number from 1 to 10:
+      </div>
+      <div class="mt-3">
+        <form name="searchUserId" ng-submit="search(userid)" class="d-flex aling-items-center">
+          <label>
+            <input name="myName" ng-model="userid" type="text" class="input-canvas me-2" pattern="\d+" placeholder="Numbers only">
+          </label>
+          <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+        <span ng-show="searchUserId.myName.$touched && searchUserId.myName.$invalid">You can put only number</span>
+      </div>
+      <div class="mt-3">
+        <div>
+          If you want to search all user click here:
+        </div>
+        <div class="mt-3">
+            <button class="btn btn-primary"><a href="#!/AllUsers" class="text-white">All Users</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

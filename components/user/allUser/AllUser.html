@@ -1,0 +1,28 @@
+<div class="container" style="height: 68rem">
+    <div class="row">
+        <div class="col-12">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">email</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="user in users">
+                    <th scope="row">{{user.id}} <a href="#!/EditUsers/{{user.id}}">Edit</a></th>
+                    <td>{{user.name}}</td>
+                    <td>{{user.username}}</td>
+                    <td>{{user.email}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-12 d-flex my-5">
+            <a href="#!/main" class="href me-4">Back to Search</a>
+            <a href="#!/AddUsers" class="href">Add a new User</a>
+        </div>
+    </div>
+</div>
