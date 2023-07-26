@@ -1,17 +1,20 @@
 (function (){
 
-    let app = angular.module('MyApp');
+    angular
+        .module('MyApp')
+        .controller('UserController', UserController);
 
-    let UserController = function ($scope , apiJson, $routeParams) {
+    function UserController ($scope , apiJson, $routeParams, $location) {
 
         let onUser = function (data) {
             $scope.user = data;
         };
 
         let onError = function (reason) {
-            $scope.error = 'not found data';
+            $scope.error = 'User not found';
         };
 
+        // alert
         $scope.alerts = [];
 
         $scope.addAlert = function() {
@@ -21,11 +24,14 @@
         $scope.closeAlert = function(index) {
             $scope.alerts.splice(index, 1);
         };
+        //
+
+        $scope.search = function () {
+            $location.path('/AllUsers')
+        };
 
         $scope.userid = $routeParams.userid;
         apiJson.getUserId($scope.userid).then(onUser, onError);
-    };
-
-    app.controller('UserController', UserController);
+    }
 
 }());

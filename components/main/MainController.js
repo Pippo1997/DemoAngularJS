@@ -1,8 +1,10 @@
 (function (){
 
-    let app = angular.module('MyApp');
+    angular
+        .module('MyApp')
+        .controller('myController', myController);
 
-    let myController = function ($scope, $location, apiJson) {
+    function myController ($scope, $location, apiJson) {
 
         $scope.search = function (userid) {
             $location.path('/user/' + userid)
@@ -15,7 +17,6 @@
             $scope.itemsPerPage = $scope.viewby;
             $scope.setItemsPerPage = function(num) {
                 $scope.itemsPerPage = num;
-                $scope.currentPage = 1;
             }
         }
 
@@ -38,8 +39,6 @@
         }
 
         apiJson.getPhoto($scope.photos).then(onPhoto);
-    };
-
-    app.controller('myController', myController);
+    }
 
 }());
