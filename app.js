@@ -1,7 +1,7 @@
 (function (){
 
     angular
-        .module('MyApp', ['ngRoute','ui.bootstrap' ])
+        .module('MyApp', ['ngRoute','ngStorage','ui.bootstrap'])
         .config(function ($routeProvider) {
         $routeProvider
             .when('/home', {

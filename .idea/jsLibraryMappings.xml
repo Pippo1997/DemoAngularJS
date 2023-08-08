@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{angular, angular-animate, angular-route, angular-sanitize, bootstrap, font-awesome, ui-bootstrap-tpls-2.5.0}" />
+    <file url="PROJECT" libraries="{angular, angular-route, bootstrap, font-awesome, ngStorage, rxjs, ui-bootstrap-tpls-2.5.0}" />
     <excludedPredefinedLibrary name="HTML" />
   </component>
 </project>

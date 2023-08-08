@@ -31,6 +31,7 @@
         };
 
         $scope.userid = $routeParams.userid;
+
         apiJson.getUserId($scope.userid).then(onUser, onError);
     }
 

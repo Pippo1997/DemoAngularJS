@@ -17,11 +17,11 @@
       <div class="mt-3">
         <form name="searchUserId" ng-submit="search(userid)" class="d-flex aling-items-center">
           <label>
-            <input name="myName" ng-model="userid" type="text" class="input-canvas me-2" pattern="\d+" placeholder="Numbers only">
+            <input name="myName" ng-model="userid" ng-init="userid = loadUserId()" ng-change="updateUserId(userid)" type="text" class="input-canvas me-2" pattern="\d+" placeholder="Numbers only">
           </label>
           <button class="btn btn-primary" type="submit">Search</button>
         </form>
-        <span ng-show="searchUserId.myName.$touched && searchUserId.myName.$invalid">You can put only number</span>
+        <span ng-show="searchUserId.myName.$touched && searchUserId.myName.$invalid">You can search only number</span>
       </div>
       <div class="mt-3">
         <div>

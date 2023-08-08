@@ -9,16 +9,11 @@
 
     function apiJson ($http, $q) {
 
+        //  funzione che recupera tutto l'array user
         function  getAllUser() {
-            return $http({
-                method: 'GET',
-                url: UrlId,
-                headers: {
-                    'Content-type': 'application/json; charset=UTF-8',
-                },
-            })
+            return $http.get(UrlId)
                 .then(SendResponse)
-                .catch(SendError);
+                .catch(SendError)
         }
 
         function SendResponse (response) {
@@ -28,16 +23,17 @@
         function SendError (response) {
             return $q.reject('error (HTTP status: ' +  response.status + ')');
         }
+        // fine
 
+        //  funzione che recupera gli user ID e utilizza le stesse risposte dellaa funzione precedente
         function  getUserId(userid) {
-            return $http({
-                method: 'GET',
-                url: UrlId + userid,
-            })
+            return $http.get(UrlId + userid)
                 .then(SendResponse)
                 .catch(SendError);
         }
+        // fine
 
+        //  funzione che permette di modificare l'array user
         function  updateUser(user) {
             return $http({
                 method: 'PUT',
@@ -55,26 +51,27 @@
         function UpdateError (response) {
             return $q.reject('error updating user (HTTP status: ' +  response.status + ')');
         }
+        // fine
 
+        // funzione che permette di aggiungere elementi all'array user
         function addUser (newUser) {
-            return $http({
-                method: 'POST',
-                url: UrlId,
-                data: newUser,
-            })
+            return $http.post(UrlId, newUser)
                 .then(addUserSuccess);
         }
 
         function addUserSuccess(response) {
             return 'User added: ' + response.config.data.name;
         }
+        // fine
 
+        // fuznione che recupere l'array delle foto
         let getPhoto = function () {
             return $http.get(UrlPhoto)
                 .then(function(response){
                     return response.data;
                 });
         }
+        // fine
 
         return {
             getUserId: getUserId,
